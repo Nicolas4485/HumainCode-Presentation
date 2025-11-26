@@ -9,7 +9,7 @@
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
-  <!-- Babel for in-browser JSX transform -->
+  <!-- Babel for in-browser JSX -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <!-- Tailwind CDN -->
@@ -27,7 +27,6 @@
 <body>
   <div id="root"></div>
 
-  <!-- React app -->
   <script type="text/babel" data-presets="env,react">
     const { useState } = React;
 
@@ -36,23 +35,23 @@
         id: 1,
         title: "HUMAIN Code",
         content: (
-          <div className="flex flex-col items-center justify-center min-h-[520px] text-center px-8 relative">
+          <div className="flex flex-col items-center justify-center min-h-[520px] text-center px-6 md:px-8 relative">
             <p className="text-emerald-400 text-sm tracking-widest mb-4">HEAD OF PRODUCT VISION</p>
-            <h1 className="text-5xl font-bold text-white mb-6">HUMAIN Code</h1>
-            <p className="text-xl text-gray-400 max-w-2xl mb-10">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">HUMAIN Code</h1>
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10">
               Making Saudi Arabia the global leader in AI-powered software development
             </p>
-            <div className="flex gap-12">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
               <div className="text-center">
-                <p className="text-3xl font-bold text-emerald-400">100%</p>
+                <p className="text-2xl md:text-3xl font-bold text-emerald-400">100%</p>
                 <p className="text-sm text-gray-500">Compliance</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-emerald-400">10x</p>
+                <p className="text-2xl md:text-3xl font-bold text-emerald-400">10x</p>
                 <p className="text-sm text-gray-500">Developer Speed</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-emerald-400">Sovereign</p>
+                <p className="text-2xl md:text-3xl font-bold text-emerald-400">Sovereign</p>
                 <p className="text-sm text-gray-500">AI Infrastructure</p>
               </div>
             </div>
@@ -66,8 +65,8 @@
         id: 2,
         title: "The Strategic WHY",
         content: (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-white mb-6">The Strategic WHY</h1>
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-6">The Strategic WHY</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <p className="text-emerald-400 text-xs tracking-widest mb-3">THE PROBLEM</p>
@@ -81,7 +80,7 @@
                 </div>
                 <div className="bg-gray-800 p-4 rounded">
                   <p className="text-gray-500 text-xs mb-2">Current reality:</p>
-                  <p className="text-white text-sm">• 2–4 hours per PR for compliance review</p>
+                  <p className="text-white text-sm">• 2-4 hours per PR for compliance review</p>
                   <p className="text-white text-sm">• 60% of PRs contain violations</p>
                   <p className="text-white text-sm">• No automated sovereignty enforcement</p>
                 </div>
@@ -111,8 +110,8 @@
         id: 3,
         title: "My Core Hypotheses",
         content: (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-white mb-2">My Core Hypotheses</h1>
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">My Core Hypotheses</h1>
             <p className="text-gray-400 text-sm mb-6">
               What I believe to be true — and how I'd validate them
             </p>
@@ -122,7 +121,7 @@
                   num: 1,
                   title: "The compliance problem is severe",
                   believe: "Government developers waste 20%+ time on manual compliance",
-                  validate: "Interview 20 developers at 5 agencies in Days 1–30",
+                  validate: "Interview 20 developers at 5 agencies in Days 1-30",
                   gate: "80%+ confirm problem"
                 },
                 {
@@ -139,7 +138,7 @@
                   validate: "Benchmark ALLaM vs GPT-4 on Saudi compliance tasks",
                   gate: "90%+ accuracy on test suite"
                 }
-              ].map((h) => (
+              ].map(h => (
                 <div
                   key={h.num}
                   className="bg-gray-800 rounded p-4 border-t-2 border-emerald-400"
@@ -165,8 +164,10 @@
         id: 4,
         title: "Requirements Prioritization",
         content: (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-white mb-1">Requirements Prioritization</h1>
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
+              Requirements Prioritization
+            </h1>
             <p className="text-gray-400 text-sm mb-4">
               How I selected what to build for the prototype demos
             </p>
@@ -200,7 +201,7 @@
                     desc: "Pipeline automation (Phase 3)",
                     active: false
                   }
-                ].map((r) => (
+                ].map(r => (
                   <div
                     key={r.id}
                     className={`bg-gray-800 rounded p-3 mb-2 border-l-2 ${
@@ -264,7 +265,7 @@
                       scores: ["MED", "LOW", "LOW"],
                       colors: ["text-yellow-400", "text-red-400", "text-red-400"]
                     }
-                  ].map((r) => (
+                  ].map(r => (
                     <div
                       key={r.id}
                       className="grid grid-cols-4 gap-2 text-xs mb-1"
@@ -299,8 +300,8 @@
         id: 5,
         title: "30-60-90 Day Plan",
         content: (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-white mb-6">
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-6">
               30-60-90 Day Execution Plan
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -365,7 +366,7 @@
                   ],
                   outcome: "Working MVP"
                 }
-              ].map((p) => (
+              ].map(p => (
                 <div key={p.days} className="bg-gray-800 rounded p-4">
                   <div className="flex items-center gap-2 mb-3">
                     <span
@@ -375,16 +376,14 @@
                     </span>
                     <span className="text-white font-semibold">{p.phase}</span>
                   </div>
-                  {p.items.map((item) => (
+                  {p.items.map(item => (
                     <div key={item.label} className="mb-2">
                       <p className="text-emerald-400 text-xs">{item.label}</p>
                       <p className="text-gray-300 text-xs">{item.text}</p>
                     </div>
                   ))}
                   <div className="bg-gray-900 p-2 rounded mt-3">
-                    <p className="text-gray-500 text-xs">
-                      Outcome: {p.outcome}
-                    </p>
+                    <p className="text-gray-500 text-xs">Outcome: {p.outcome}</p>
                   </div>
                 </div>
               ))}
@@ -396,8 +395,8 @@
         id: 6,
         title: "Discovery: Persona",
         content: (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-white mb-1">
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
               Discovery: Primary Persona
             </h1>
             <p className="text-gray-400 text-sm mb-4">
@@ -477,8 +476,8 @@
         id: 7,
         title: "Design: Architecture",
         content: (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-white mb-1">
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
               Design: Product Architecture
             </h1>
             <p className="text-gray-400 text-sm mb-4">
@@ -531,7 +530,9 @@
               </div>
               <div className="w-full md:w-36">
                 <div className="bg-gradient-to-b from-emerald-500 to-emerald-600 rounded-lg p-4 text-center">
-                  <p className="text-white/70 text-xs tracking-widest">AI CORE</p>
+                  <p className="text-white/70 text-xs tracking-widest">
+                    AI CORE
+                  </p>
                   <p className="text-white text-2xl font-bold">ALLaM</p>
                   <p className="text-white/80 text-xs mt-2">
                     Arabic-native
@@ -564,12 +565,14 @@
                     title: "VAT Compliance",
                     desc: "15% enforcement validation"
                   }
-                ].map((c) => (
+                ].map(c => (
                   <div
                     key={c.title}
                     className="bg-gray-800 rounded p-3 mb-2 border-l-2 border-emerald-400"
                   >
-                    <p className="text-white font-semibold text-sm">{c.title}</p>
+                    <p className="text-white font-semibold text-sm">
+                      {c.title}
+                    </p>
                     <p className="text-gray-400 text-xs">{c.desc}</p>
                   </div>
                 ))}
@@ -587,8 +590,8 @@
         id: 8,
         title: "Develop: Roadmap",
         content: (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-white mb-1">
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
               Develop: Outcome-Based Roadmap
             </h1>
             <p className="text-gray-400 text-sm mb-4">
@@ -650,7 +653,7 @@
                   gate: "5K MAU, 50 enterprise",
                   color: "border-emerald-700"
                 }
-              ].map((p) => (
+              ].map(p => (
                 <div
                   key={p.phase}
                   className={`bg-gray-800 rounded p-3 ${
@@ -685,7 +688,7 @@
                   <p className="text-white text-xs font-semibold mb-2">
                     OUTCOME: {p.outcome}
                   </p>
-                  {p.items.map((item) => (
+                  {p.items.map(item => (
                     <p key={item} className="text-gray-300 text-xs">
                       {item.startsWith("Early:") ? item : `✓ ${item}`}
                     </p>
@@ -709,8 +712,8 @@
         id: 9,
         title: "Deploy: GTM",
         content: (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-white mb-1">
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
               Deploy: Go-to-Market
             </h1>
             <p className="text-gray-400 text-sm mb-4">
@@ -743,7 +746,7 @@
                     desc: "Flat6Labs, Vision Ventures portfolio, tech startups",
                     motion: "Self-serve with startup pricing tier"
                   }
-                ].map((s) => (
+                ].map(s => (
                   <div
                     key={s.name}
                     className="bg-gray-800 rounded p-3 mb-2 border-l-2 border-emerald-400"
@@ -809,8 +812,8 @@
         id: 10,
         title: "Pricing Strategy",
         content: (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-white mb-1">
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
               Pricing Strategy
             </h1>
             <p className="text-gray-400 text-sm mb-4">
@@ -838,3 +841,416 @@
                     4. Value premium justified by compliance automation
                   </p>
                 </div>
+                <p className="text-emerald-400 text-xs tracking-widest mb-2">
+                  TIER STRUCTURE
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                  {[
+                    {
+                      tier: "Startup",
+                      price: "$29",
+                      unit: "/seat/month",
+                      desc: "Basic compliance",
+                      color: "border-gray-600"
+                    },
+                    {
+                      tier: "Enterprise",
+                      price: "$59",
+                      unit: "/seat/month",
+                      desc: "Full compliance + SSO",
+                      color: "border-emerald-500"
+                    },
+                    {
+                      tier: "Government",
+                      price: "Custom",
+                      unit: "annual contract",
+                      desc: "Dedicated + SLA",
+                      color: "border-yellow-500"
+                    }
+                  ].map(t => (
+                    <div
+                      key={t.tier}
+                      className={`bg-gray-800 rounded p-3 border-t-2 ${t.color}`}
+                    >
+                      <p className="text-white font-semibold text-sm">
+                        {t.tier}
+                      </p>
+                      <p className="text-emerald-400 text-xl font-bold">
+                        {t.price}
+                      </p>
+                      <p className="text-gray-500 text-xs">{t.unit}</p>
+                      <p className="text-gray-400 text-xs mt-1">{t.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex-1">
+                <p className="text-emerald-400 text-xs tracking-widest mb-3">
+                  VALUE JUSTIFICATION
+                </p>
+                <div className="bg-gray-800 rounded p-3 mb-2">
+                  <p className="text-red-400 text-sm mb-1">
+                    Current cost (manual compliance):
+                  </p>
+                  <p className="text-gray-300 text-xs">
+                    3 hrs/PR × $50/hr × 20 PRs/mo ={" "}
+                    <span className="text-red-400 font-bold">
+                      $3,000/dev/mo
+                    </span>
+                  </p>
+                </div>
+                <div className="bg-gray-800 rounded p-3 mb-2">
+                  <p className="text-emerald-400 text-sm mb-1">
+                    HUMAIN Code cost:
+                  </p>
+                  <p className="text-gray-300 text-xs">
+                    $59/seat/month ={" "}
+                    <span className="text-emerald-400 font-bold">
+                      98% cost reduction
+                    </span>
+                  </p>
+                </div>
+                <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded p-3 mb-3">
+                  <p className="text-white font-semibold text-sm mb-1">
+                    ROI for 100-seat enterprise:
+                  </p>
+                  <p className="text-white/90 text-xs">
+                    Save $294K/month vs manual review
+                  </p>
+                  <p className="text-white/90 text-xs">
+                    50x return on investment
+                  </p>
+                </div>
+                <p className="text-emerald-400 text-xs tracking-widest mb-2">
+                  ALTERNATIVES CONSIDERED
+                </p>
+                <div className="bg-gray-800 rounded p-2">
+                  <p className="text-gray-500 text-xs">
+                    <span className="text-gray-600">✕ Pure usage:</span>{" "}
+                    Unpredictable, hard to budget
+                  </p>
+                  <p className="text-gray-500 text-xs">
+                    <span className="text-gray-600">✕ Flat fee:</span> Doesn't
+                    scale with value
+                  </p>
+                  <p className="text-gray-500 text-xs">
+                    <span className="text-gray-600">✕ Freemium:</span> Wrong
+                    signal for enterprise
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+      },
+      {
+        id: 11,
+        title: "Vision: 2030",
+        content: (
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
+              Long-term Vision: 2030
+            </h1>
+            <p className="text-gray-400 text-sm mb-3">
+              From product to platform to national infrastructure
+            </p>
+            <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg p-4 mb-4 text-center">
+              <p className="text-white font-semibold">
+                By 2030, every line of code in Saudi digital infrastructure will
+                be enhanced by HUMAIN Code — making the Kingdom the global
+                benchmark for AI-powered development.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+              {[
+                {
+                  years: "2025-2026",
+                  name: "Developer Tool",
+                  items: [
+                    "5,000 active developers",
+                    "50 enterprise customers",
+                    "IDE + PR review"
+                  ],
+                  focus: "Prove value"
+                },
+                {
+                  years: "2027",
+                  name: "DevOps Platform",
+                  items: [
+                    "25,000 developers",
+                    "Full CI/CD integration",
+                    "GCC region expansion"
+                  ],
+                  focus: "Capture workflow"
+                },
+                {
+                  years: "2028",
+                  name: "AI Ecosystem",
+                  items: [
+                    "100,000 developers",
+                    "Marketplace and plugins",
+                    "Custom model training"
+                  ],
+                  focus: "Platform effects"
+                },
+                {
+                  years: "2029-2030",
+                  name: "National Infra",
+                  items: [
+                    "300,000+ developers",
+                    "Government mandate",
+                    "Global MENA export"
+                  ],
+                  focus: "Vision 2030 complete",
+                  highlight: true
+                }
+              ].map(y => (
+                <div
+                  key={y.years}
+                  className={`bg-gray-800 rounded p-3 ${
+                    y.highlight ? "border border-emerald-400" : ""
+                  }`}
+                >
+                  <p className="text-emerald-400 text-xs tracking-widest">
+                    {y.years}
+                  </p>
+                  <p className="text-white font-semibold text-sm mb-2">
+                    {y.name}
+                  </p>
+                  {y.items.map(item => (
+                    <p key={item} className="text-gray-300 text-xs">
+                      {item}
+                    </p>
+                  ))}
+                  <div
+                    className={`${
+                      y.highlight
+                        ? "bg-emerald-500 text-gray-900"
+                        : "bg-gray-900 text-gray-500"
+                    } p-1.5 rounded mt-2`}
+                  >
+                    <p className="text-xs font-medium">{y.focus}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      },
+      {
+        id: 12,
+        title: "Why Me",
+        content: (
+          <div className="p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Why I'm the Right Leader
+            </h1>
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex-1">
+                <p className="text-emerald-400 text-xs tracking-widest mb-3">
+                  RELEVANT EXPERIENCE
+                </p>
+                {[
+                  {
+                    title: "AI-Powered Platform at Scale",
+                    desc: "Designed AI recommendation engine at Publicis — projected 5x productivity across 60+ agencies"
+                  },
+                  {
+                    title: "Enterprise Product Leadership",
+                    desc: "$15M monthly cost savings. Global rollouts across US, EU, India. 90% faster time-to-market."
+                  },
+                  {
+                    title: "Product Transformation (Consulting)",
+                    desc: "Unified Elliptic's product suite, new SaaS model. Migrated legacy products with 85% success."
+                  },
+                  {
+                    title: "Founder: 0-to-1 Execution",
+                    desc: "Switch2VR: 600K profit Year 1. Switch2VU: 50 customers in 4 months. UAE + KSA markets."
+                  }
+                ].map(e => (
+                  <div
+                    key={e.title}
+                    className="bg-gray-800 rounded p-3 mb-2 border-l-2 border-emerald-400"
+                  >
+                    <p className="text-white font-semibold text-sm">
+                      {e.title}
+                    </p>
+                    <p className="text-gray-400 text-xs">{e.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex-1">
+                <p className="text-emerald-400 text-xs tracking-widest mb-3">
+                  WHAT I BRING TO HUMAIN
+                </p>
+                <div className="bg-gray-800 rounded p-4 mb-3">
+                  {[
+                    {
+                      num: 1,
+                      title: "Hypothesis-Driven",
+                      desc: "Validate before building. Data over opinions."
+                    },
+                    {
+                      num: 2,
+                      title: "AI Product Strategy",
+                      desc: "Work with data science teams to ship AI features."
+                    },
+                    {
+                      num: 3,
+                      title: "Middle East Experience",
+                      desc: "Built and scaled products in UAE and KSA."
+                    },
+                    {
+                      num: 4,
+                      title: "Already Building",
+                      desc: "Built working prototypes before this interview."
+                    }
+                  ].map(b => (
+                    <div key={b.num} className="flex gap-3 mb-3">
+                      <div className="w-7 h-7 bg-emerald-500 rounded flex items-center justify-center text-sm font-bold text-gray-900 flex-shrink-0">
+                        {b.num}
+                      </div>
+                      <div>
+                        <p className="text-white font-semibold text-sm">
+                          {b.title}
+                        </p>
+                        <p className="text-gray-400 text-xs">{b.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded p-3 text-center">
+                  <p className="text-white font-semibold">
+                    I don't just talk about products — I build them.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+      },
+      {
+        id: 13,
+        title: "Closing",
+        content: (
+          <div className="flex flex-col items-center justify-center min-h-[520px] text-center px-6 md:px-8">
+            <p className="text-emerald-400 text-sm tracking-widest mb-4">
+              THE QUESTION
+            </p>
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-6 max-w-2xl">
+              How do we make HUMAIN Code the platform that powers Vision 2030?
+            </h1>
+            <p className="text-gray-400 max-w-xl mb-8">
+              By starting with compliance, validating with real developers,
+              building sovereign infrastructure, and scaling with discipline.
+            </p>
+            <div className="w-16 h-1 bg-emerald-500 rounded mb-8"></div>
+            <div className="flex flex-col md:flex-row gap-4 mb-8">
+              <div className="bg-gray-800 rounded p-4 text-center border border-gray-700">
+                <p className="text-gray-500 text-xs tracking-widest mb-1">
+                  WHAT I BUILT
+                </p>
+                <p className="text-white font-semibold">2 Prototypes</p>
+              </div>
+              <div className="bg-gray-800 rounded p-4 text-center border border-gray-700">
+                <p className="text-gray-500 text-xs tracking-widest mb-1">
+                  WHAT I WILL DELIVER
+                </p>
+                <p className="text-white font-semibold">MVP in 90 Days</p>
+              </div>
+              <div className="bg-gradient-to-b from-emerald-500 to-emerald-600 rounded p-4 text-center">
+                <p className="text-white/80 text-xs tracking-widest mb-1">
+                  LET'S BUILD
+                </p>
+                <p className="text-white font-semibold">Together</p>
+              </div>
+            </div>
+            <p className="text-2xl text-emerald-400 font-semibold">Thank You</p>
+          </div>
+        )
+      }
+    ];
+
+    function HUMAINPresentation() {
+      const [currentSlide, setCurrentSlide] = useState(0);
+
+      const nextSlide = () =>
+        setCurrentSlide(prev => Math.min(prev + 1, slides.length - 1));
+      const prevSlide = () =>
+        setCurrentSlide(prev => Math.max(prev - 1, 0));
+
+      React.useEffect(() => {
+        const handleKeyDown = (e) => {
+          if (e.key === "ArrowRight" || e.key === " ") nextSlide();
+          if (e.key === "ArrowLeft") prevSlide();
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+      }, []);
+
+      return (
+        <div className="bg-gray-900 min-h-screen flex flex-col">
+          {/* Slide area */}
+          <div className="flex-1 flex justify-center py-6 md:py-8">
+            <div className="w-full max-w-6xl">
+              {slides[currentSlide].content}
+            </div>
+          </div>
+
+          {/* Controls */}
+          <div className="bg-gray-800 p-3 md:p-4 flex flex-col md:flex-row items-center justify-between gap-3">
+            <button
+              onClick={prevSlide}
+              disabled={currentSlide === 0}
+              className="w-full md:w-auto px-4 py-2 bg-emerald-600 text-white rounded disabled:opacity-30 disabled:cursor-not-allowed hover:bg-emerald-500"
+            >
+              ← Previous
+            </button>
+
+            <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2 text-center">
+              <div>
+                <span className="text-white font-semibold">
+                  {currentSlide + 1}
+                </span>
+                <span className="text-gray-500"> / {slides.length}</span>
+              </div>
+              <span className="text-gray-400 md:ml-4 text-xs md:text-sm">
+                {slides[currentSlide].title}
+              </span>
+            </div>
+
+            <button
+              onClick={nextSlide}
+              disabled={currentSlide === slides.length - 1}
+              className="w-full md:w-auto px-4 py-2 bg-emerald-600 text-white rounded disabled:opacity-30 disabled:cursor-not-allowed hover:bg-emerald-500"
+            >
+              Next →
+            </button>
+          </div>
+
+          {/* Thumbnails */}
+          <div className="bg-gray-900 p-3 flex gap-2 overflow-x-auto">
+            {slides.map((slide, idx) => (
+              <button
+                key={slide.id}
+                onClick={() => setCurrentSlide(idx)}
+                className={`flex-shrink-0 w-10 md:w-16 h-8 md:h-10 rounded text-xs flex items-center justify-center ${
+                  idx === currentSlide
+                    ? "bg-emerald-600 text-white"
+                    : "bg-gray-700 text-gray-400 hover:bg-gray-600"
+                }`}
+              >
+                {idx + 1}
+              </button>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    const rootElement = document.getElementById("root");
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(<HUMAINPresentation />);
+  </script>
+</body>
+</html>
